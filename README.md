@@ -49,14 +49,15 @@ Additionally, save the following HTML in a file named "page.html".
 	</BODY>
 </HTML>
 ```
+In the same directory that you saved the code and HTML, create your dockerfile, named "Dockerfile" for simplicity.
 
 # Get the Dev Tools and Install Go
-In the same directory that you saved the code and HTML, create your dockerfile, named "Dockerfile" for simplicity.
+
 
 ## Use the Developer Tools Base Image
 Bitnami provides a base image that comes with typical development tools preinstalled. This includes things like compilers, but also Git, which you will need for using Go. This image is called the Bitnami Build Pack. It is built on top of minideb, which is a slimmed down Debian distribution that we use as the basis for all of our containers.
 
-The build pack image is available in dockerhup, so in order to use it for your base image, all you need to do is add this as the first line in your docker file:
+The build pack image is available in dockerhub, so in order to use it for your base image, all you need to do is add this as the first line in your docker file:
 
 ```
 FROM bitnami/minideb-extras:jessie-r14-buildpack
